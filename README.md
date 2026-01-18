@@ -13,6 +13,23 @@
 
 The **UNeXt** is lightweight, more efficient segmentation architecture that maintains state of the art accuracy. The UNeXt paper proposes a hybrid model that combines the strengths of convolutional layers with MLP layers to enhance feature extraction, all while reducing computational costs. This project aims to implement and replicate  the results of the the UNeXt model as a part of EN3160 Image Processing and Machine Vision module.
 
+## Citation & Acknowledgment
+
+This is a restructured re-implementation of the work from the following paper:
+
+```bibtex
+@article{valanarasu2022unext,
+  title={UNeXt: MLP-based Rapid Medical Image Segmentation Network},
+  author={Valanarasu, Jeya Maria Jose and Patel, Vishal M},
+  journal={arXiv preprint arXiv:2203.04967},
+  year={2022}
+}
+```
+
+The codebase is based on the original author's repository: [https://github.com/jeya-maria-jose/UNeXt-pytorch](https://github.com/jeya-maria-jose/UNeXt-pytorch)
+
+**All credit goes to the original authors.**
+
 ## Architecture
 The following diagram shows the architecture of the UNeXt model.
 

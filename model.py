@@ -49,6 +49,7 @@ class shiftmlp(nn.Module):
     def forward(self, x, H, W):
         B, N, C = x.shape
 
+        # Shift operation
         xn = x.transpose(1, 2).view(B, C, H, W).contiguous()
         xn = F.pad(xn, (self.pad, self.pad, self.pad, self.pad) , "constant", 0)
         xs = torch.chunk(xn, self.shift_size, 1)
@@ -68,6 +69,7 @@ class shiftmlp(nn.Module):
         x = self.act(x) 
         x = self.drop(x)
 
+        ## shift operation 2
         xn = x.transpose(1, 2).view(B, C, H, W).contiguous()
         xn = F.pad(xn, (self.pad, self.pad, self.pad, self.pad) , "constant", 0)
         xs = torch.chunk(xn, self.shift_size, 1)
